@@ -158,7 +158,7 @@ if __name__ == "__main__":
             for x in ['train', 'validation']}
     dataloaders = {x : torch.utils.data.DataLoader(datasets[x], batch_size, shuffle=True) for x in ['train', 'validation']}
     
-    # Update mean & std statistics throughout the whole training dataset 
+    # update mean & std statistics throughout the whole training dataset 
     stats = StatsRecorder()
     with torch.no_grad():
         for idx, data in enumerate(dataloaders["train"]): 
