@@ -142,7 +142,7 @@ def train(model, criterion, optimizer, dataloaders, threshold, plot=False):
 
 
 if __name__ == "__main__":
-    X_gps_imu, X_vision, drivers, y = preprocessing('C:/Users/CARVI/Desktop/trip_data_final/year=2021/5월_trip_final/')
+    X_gps_imu, X_vision, drivers, y = preprocessing('C:/Users/Desktop/trip_data_final/year=2021/5월_trip_final/')
 
     # train/validation/test set split  
     ind_train, ind_test = train_test_split(np.arange(len(X_gps_imu[0])), test_size=0.4, random_state=101)
