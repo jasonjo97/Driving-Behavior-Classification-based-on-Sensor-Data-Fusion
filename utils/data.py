@@ -1,7 +1,7 @@
 import os 
 import numpy as np 
 
-# load data 
+
 def read_x_data(filename): 
     with open(filename, 'r') as f: 
         x_data = [list(map(float,line.split()[1:])) for line in f.read().splitlines()]
@@ -39,7 +39,6 @@ def load_data_vision(folder):
     
     return X
 
-# nan-padding
 def nan_padding(lst, max_length):
     for i in range(len(lst)): 
         if max_length > len(lst[i]): lst[i].extend([np.nan]*(max_length-len(lst[i]))) 
@@ -47,7 +46,6 @@ def nan_padding(lst, max_length):
         
     return lst
 
-# find maximum length signal 
 def find_maxlength(x):
     max_length = 0 
 
